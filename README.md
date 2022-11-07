@@ -2,26 +2,15 @@
 
 Can scrap all the available news article on a particular search topic from **Annapurna Post**.
 
-#### Manual tasks needed to run:
+#### Manual task needed to run:
 
-Change this two variable values as per the search topic.
+Change this variable as per the search topic.
 
 ```sh
 news_topic = "डेंगु"
-file_name = "dengue-news.json"
 ```
 
-If you are trying to scrap on a particular topic for the first time, first: create a empty json file as shown below with file name just shown in above **file_name** variable:
-
-```sh
-{
-  "fetched_upto": 0,
-  "total_page": 0,
-  "articles": []
-}
-```
-
-Now when you run the **main.py** script, the above created json file will be updated like below example:
+Now when you run the **main.py** script, new file with **डेंगु.json** will be created with information as shown in example below:
 
 ```sh
 {
