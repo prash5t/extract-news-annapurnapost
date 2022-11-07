@@ -7,20 +7,11 @@ news_topic = "दुर्घटना"
 file_name = f"{news_topic}.json"
 page_to_fetch = 1  # initial
 
-# this part to create new json file when trying to search news on new topic
-file_exists = os.path.exists('file_name')
-if (file_exists != True):
-    default_json = {
-        "fetched_upto": 0,
-        "total_page": 0,
-        "articles": []
-    }
-    with open(file_name, "w") as outfile:
-        json.dump(default_json, outfile)
-        outfile.close()
-
-with open(file_name, 'r') as file:
-    saved_news = json.load(file)
+try:
+    with open(file_name, 'r') as file:
+        saved_news = json.load(file)
+except:
+    saved_news = {"fetched_upto": 0, "articles": []}
 
 
 while True:
