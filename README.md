@@ -1,6 +1,6 @@
 #### What does this script do?
 
-Can scrap all the available news article on a particular search topic from **Annapurna Post**.
+Can extract all the available news article on a particular search topic from **Annapurna Post**.
 
 #### Manual task needed to run:
 
